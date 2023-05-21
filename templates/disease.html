@@ -1,0 +1,89 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<style>
+  html body {
+    background-color: rgb(206, 206, 228);
+  }
+
+  .input-img{
+    justify-content: center;
+    text-align: center;
+  }
+</style>
+<br /><br />
+  <h2 style="text-align: center; margin: 0px; color: black">
+    <b>Find out which disease has been caught by your plant</b>
+  </h2>
+  <br />
+  <br>
+
+<div 
+  class="input-img"
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" style="padding-left: 70px;" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+    <br>
+    <br>
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <div class="d-flex justify-content-center" style="margin-top: 20px;">
+      <a
+        class="btn btn-info"
+        style="color:black; 
+               font-weight: bold;
+               width: 130px;
+               height: 50px;
+               border-radius: 12px;
+               font-size: 21px;
+               margin-right: 60px;"
+        href="{{ url_for('home') }}"
+               
+        >
+        Cancel
+      </a>
+      <button
+        class="btn  btn-info  "
+        type="submit"
+        style="color: black;
+               font-weight: bold;
+               width: 130px;
+               height: 50px;
+               border-radius: 12px;
+               font-size: 21px;
+               text-align: center;"
+        >
+        Predict
+      </button>
+    </div>
+
+
+  </form>
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
