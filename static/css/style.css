@@ -669,7 +669,28 @@ p.about-text {
     background: #009f4d;
     display: inline-block;
 }
-/*--  //text --*/
+/* Guide to use */
+
+#testimonials{
+    background-color: #ffffff;
+}
+.testimonial-img{
+    width: 50%;
+    margin: 15px;
+}
+.testimonial-text{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+#press{
+    padding-bottom: 20px;
+}
+.press-img{
+    width: 15%;
+    margin: 15px;
+}
 
 /*-- footer --*/
 

@@ -155,6 +155,14 @@ def fertilizer_recommendation():
 
 # render disease prediction input page
 
+#render weather page
+
+@ app.route('/weather')
+def weather_forcasting():
+    title = 'FarmEasy - Weather'
+
+    return render_template('weather.html', title=title)
+
 
 
 
