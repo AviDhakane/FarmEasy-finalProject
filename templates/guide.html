@@ -1,0 +1,184 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<style>
+    body{
+        background-color: rgb(227, 221, 255);
+           
+    }
+    .headline{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 2rem; 
+        text-align: center;
+    }
+
+    h1{
+        color: rgb(41, 131, 41);
+    }
+
+    .arrow{
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .guide-body{
+        background-color: white;
+        height: 100%;
+        margin-top: 1rem;
+        padding: 2px; 
+    }
+    
+    .body-text{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    /* .carousal-img{
+        width: 250px;
+        height: 450px;
+    } */
+
+    li {
+        list-style-type: square;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container{
+        margin-bottom: 1rem;
+        /* background-color: antiquewhite; */
+    }
+
+</style>
+
+<div class="headline">
+    <h1>Detailed guide to use website efficiantly..</h1>
+</div>
+
+<div class="headline">
+    <h3>Before taking any decision please consider following recommandations</h3>
+</div>
+
+<div class="arrow">
+    <img style="width: 80px;" src="{{url_for('static', filename='images/below_arrow.png')}}" alt="">
+</div>
+
+<div class="container">
+    <div id="carouselExample" class="carousel slide container-fluid guide-body" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="rounded " src="{{url_for('static', filename='images/soil-test.jpg')}}" alt="First slide">
+                </div>
+                <div class="col-sm-8" >
+                    <h2 class="body-text" style="margin-top: 1rem;">Soil Testing</h2><br>
+                    <p>We recommand to do soil testing before taking any decision of farming.
+                        A soil test lets the farmers understand what amount of nutrients are already present 
+                        in the soil and how much extra is needed. It helps in bringing increased uniformity 
+                        of nutrient availability across the fields for more uniform crop growth. <br>
+                        Denotes the number of fertilizers to be used:<br> 
+                        Understanding the exact deficiency in the soil can help farmers take the required measures. 
+                        Fertilizers are used to provide additional nutrients to the plants, to improve the yield of the crops, 
+                        and for the greening of lawns. There are inorganic fertilizers like potassium and phosphorus which are very limited resources. 
+                        Such fertilizers can be avoided if not needed by the soil. Which fertilizers to use, and in which 
+                        amount can be decided on the basis of soil tests. It also prevents over-fertilization.  
+                    </p>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="rounded carousal-img" src="{{url_for('static', filename='images/weather.jpg')}}" alt="Second slide">
+                </div>
+                <div class="col-sm-8">
+                    <h2 class="body-text" style="margin-top: 1rem;">Know the Weather</h2><br>
+                    <p>the weather has a significant impact on the agriculture industry. Indeed, crops need the basics
+                        of moisture, warmth, and sun to thrive. But what’s less obvious is how the details of 
+                        weather information can drive a grower’s business decisions, helping them to plan efficiently, 
+                        minimize costs and maximize yields and profits as a result.. <br>
+                        While farmers must make many day-to-day decisions related to weather conditions, there are 
+                        four primary areas of farming that are fundamentally affected impacted by weather:<br> 
+                        <ol>
+                            <li>Crop Growth/Irrigation</li>
+                            <li>Fertilizer Timing and Delivery</li>
+                            <li>Pest and Disease Control</li>
+                            <li>Field Workability</li>
+                        </ol>
+                        To know weather at your field click below link 👇<br>
+                        <a href="https://weather.com/en-IN/weather/today/l/18.53,73.70?par=google">Click here</a> 
+                    </p>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        <a class="carousel-control-prev"  href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+            <span class="sr-only">Next</span>
+          </a>
+      </div>
+
+      <div class="headline">
+        <h3>Tutuorials for use of modules</h3>
+      </div>
+
+      <div class="arrow">
+        <img style="width: 80px;" src="{{url_for('static', filename='images/below_arrow.png')}}" alt="">
+      </div>
+</div>
+
+<div class="container">
+    <div class="demo">
+        <div class="crop-demo">
+            <div class="row">
+                <div class="col-sm-4">
+                    <video class="rounded"  frameborder="0" autoplay muted loop src="{{url_for('static',filename='images/crop-demo.mp4')}}" style="width:348.663px  ;"></video>
+                </div> 
+                <div class="col-sm-8" style="background-color: white; margin-left: -1rem;">
+                    <h3 class="body-text" style="margin-top: 1rem;">Crop recommandation</h3><br>
+                    <p>Crop recommandation module recommends a suitable crop for your field basis on your 
+                        region, soil data like NPK values and pH. Also select your city to fetch weather conditions
+                        like tempreature and humudity. Weather plays important role in overall process.
+                    </p><br>
+                        <ol>
+                            <li>Nitrogen (N)</li>
+                            <li>P: Phosphorus</li>
+                            <li>K: Pottasium</li>
+                            <li>pH: acidic property of soil</li>
+                            <li>Rainfall: in inches</li>
+                        </ol>
+                        <p>Here you have to input all above necessary 
+                            values then click on 'Predict'. It will pop with best suitable crop name. That's how easy it is!</p>
+                </div>
+            </div>
+        </div>
+        <div class="fertilizer-demo" style="margin-top: 0.5rem;">
+            <div class="row">
+                <div class="col-sm-8" style="background-color: white; margin-right:-1rem;">
+                    <h3 class="body-text" style="margin-top: 1rem;">Fertilizer Suggetion</h3><br>
+                    <p>Crop recommandation module recommends a suitable crop for you. But this module will suggest
+                        you the necessary fertilizer to increase soil fertility, again based on soil's NPK values
+                        and estimated crop to be taken. NPK values helps to determine deficiency of particular soil nutriant.
+                        It also dependant on crop to be harvest. Specific crop requires specific amount of nutrients
+                        , so based on that fertilizer combination will be suggested.
+                    </p><br>      
+                </div>
+                <div class="col-sm-4">
+                    <video class="rounded"  frameborder="0" autoplay muted loop src="{{url_for('static',filename='images/fertilizer-demo.mp4')}}" style="width:348.663px  ;"></video>
+                </div>
+            </div>
+        </div>
+      </div>    
+</div>
+
+<script>
+    const carousel = new bootstrap.Carousel('#myCarousel')
+</script>
+
+{% endblock %}

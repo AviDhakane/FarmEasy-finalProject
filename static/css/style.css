@@ -692,6 +692,26 @@ p.about-text {
     margin: 15px;
 }
 
+/* Weather */
+
+.weather-container{
+	outline: solid 1px black;
+	justify-content: center;
+	height: 800px;
+	background-color: #0c0d1a;
+}
+
+.search-bar{
+	display: flex;
+	justify-content: center;
+}
+
+.city-div{
+	display: block;
+	outline:solid 1px white ;
+	margin-top: 3rem;
+}
+
 /*-- footer --*/
 
 p.footer-para {

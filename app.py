@@ -122,6 +122,8 @@ def predict_image(img, model=disease_model):
     # Retrieve the class label
     return prediction
 
+     
+
 # ===============================================================================================
 # ------------------------------------ FLASK APP -------------------------------------------------
 
@@ -157,11 +159,18 @@ def fertilizer_recommendation():
 
 #render weather page
 
-@ app.route('/weather')
-def weather_forcasting():
-    title = 'FarmEasy - Weather'
+# @ app.route('/weather')
+# def weather_forcasting():
+#     title = 'FarmEasy - Weather'
 
-    return render_template('weather.html', title=title)
+#     return render_template('weather.html', title=title)
+
+# render user guide page
+@ app.route('/user_guide')
+def user_guide():
+    title = 'FarmEasy - User Guide'
+
+    return render_template('guide.html', title=title)
 
 
 
@@ -188,7 +197,7 @@ def crop_prediction():
         city = request.form.get("city")
 
         if weather_fetch(city) != None:
-            temperature, humidity = weather_fetch(city)
+            temperature, humidity = weather_fetch(city)   
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
@@ -266,6 +275,7 @@ def disease_prediction():
         except:
             pass
     return render_template('disease.html', title=title)
+   
 
 
 # ===============================================================================================
