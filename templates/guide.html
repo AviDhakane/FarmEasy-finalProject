@@ -137,10 +137,10 @@
     <div class="demo">
         <div class="crop-demo">
             <div class="row">
-                <div class="col-sm-4">
-                    <video class="rounded"  frameborder="0" autoplay muted loop src="{{url_for('static',filename='images/crop-demo.mp4')}}" style="width:348.663px  ;"></video>
+                <div class="col-sm-4" style="padding-left: 0px;">
+                    <video class="rounded"  controls autoplay muted loop src="{{url_for('static',filename='images/crop-demo.mp4')}}" style="width:348.663px  ;"></video>
                 </div> 
-                <div class="col-sm-8" style="background-color: white; margin-left: -1rem;">
+                <div class="col-sm-8" style="background-color: white; margin-left: -2rem;margin-bottom: 0.5rem;">
                     <h3 class="body-text" style="margin-top: 1rem;">Crop recommandation</h3><br>
                     <p>Crop recommandation module recommends a suitable crop for your field basis on your 
                         region, soil data like NPK values and pH. Also select your city to fetch weather conditions
@@ -158,10 +158,17 @@
                 </div>
             </div>
         </div>
-        <div class="fertilizer-demo" style="margin-top: 0.5rem;">
+        <div class="fertilizer-demo" style="margin-top: 1rem;">
             <div class="row">
-                <div class="col-sm-8" style="background-color: white; margin-right:-1rem;">
+                <div class="col-sm-8" style="background-color: white; margin-right:-1rem; margin-bottom: 0.5rem;">
                     <h3 class="body-text" style="margin-top: 1rem;">Fertilizer Suggetion</h3><br>
+                    <p>The role of fertilizers is to increase yield and ensure healthy produce by supplying 
+                        the right balance of nutrients to the soil.
+                        "Without fertilizers, the soil would be depleted and therefore plants would be particularly 
+                        difficult to grow. They cannot survive on water alone, and nor can we. If we want good 
+                        nutritious food, plants need nutrition and that makes our food much more enjoyable,
+                        " says Barry Bull, plant nutrition consultant </p><br>
+                        
                     <p>Crop recommandation module recommends a suitable crop for you. But this module will suggest
                         you the necessary fertilizer to increase soil fertility, again based on soil's NPK values
                         and estimated crop to be taken. NPK values helps to determine deficiency of particular soil nutriant.
@@ -170,7 +177,25 @@
                     </p><br>      
                 </div>
                 <div class="col-sm-4">
-                    <video class="rounded"  frameborder="0" autoplay muted loop src="{{url_for('static',filename='images/fertilizer-demo.mp4')}}" style="width:348.663px  ;"></video>
+                    <video controls class="rounded"  frameborder="0" autoplay muted loop src="{{url_for('static',filename='images/fertilizer-demo.mp4')}}" style="width:348.663px  ;"></video>
+                </div>
+            </div>
+        </div>
+        <div class="disease-demo" style="margin-top: 1rem;">
+            <div class="row">
+                <div class="col-sm-4" style="padding-left: 0px;" >
+                    <video class="rounded" controls  autoplay muted loop src="{{url_for('static',filename='images/disease-demo.mp4')}}" style="width:348.663px  ;"></video>
+                </div> 
+                <div class="col-sm-8" style="background-color: white; margin-left: -2rem;margin-bottom: 0.5rem;">
+                    <h3 class="body-text" style="margin-top: 1rem;">Disease detection and cure</h3><br>
+                    <p>In india majority farmers dont have proper knowledge of crop diseases, it's causes and 
+                        how to cure it. diseases harms yield and quality of crop. That's why it is very needful to
+                        prevent crop from diseases. and by following this objective we built this module. Here you have
+                        just upload neat image if crop area where disease is got then just click on predict and detailed
+                        information of disease and its cure will show up. That's simple it is!
+                    </p><br>
+                        <p>If your crop is healthy model will detect it and let you know that to no worry
+                            youre crop is healthy. </p>
                 </div>
             </div>
         </div>
